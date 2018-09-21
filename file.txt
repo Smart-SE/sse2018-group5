@@ -1,0 +1,4 @@
+open localhost
+user anonymous @
+get dengon00.csv
+quit
