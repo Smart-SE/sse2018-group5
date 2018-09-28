@@ -2,7 +2,6 @@
 
 downloadCsv();
 
-
 function downloadCsv() {
 
 	try {

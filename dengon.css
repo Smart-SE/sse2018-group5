@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+table{
+  margin-left: auto;
+  border-collapse:collapse;
+  margin:0 auto;
+}
+th{
+  color:#005ab3;
+}
+td{
+  border-bottom:1px dashed #999;
+}
+th,tr:last-child td{
+  border-bottom:2px solid #005ab3;
+}
+td,th{
+  padding:10px;
+}
+
+h1{
+position: relative;
+padding: 0.5em;
+background: #a6d3c8;
+color: white;
+}
+
+h1::before {
+position: absolute;
+content: '';
+top: 100%;
+left: 0;
+border: none;
+border-bottom: solid 15px transparent;
+border-right: solid 20px rgb(149, 158, 155);
+}
+
+h2 {
+padding: 0.25em 0.5em;/*上下 左右の余白*/
+color: #494949;/*文字色*/
+background: transparent;/*背景透明に*/
+border-left: solid 5px #a6d3c8;/*左線*/
+}
+//
+h3{
+position: relative;
+padding: 0.25em 1em;
+border: solid 2px black;
+border-radius: 3px 0 3px 0;
+}
+
+h3:before,h3:after
+{
+content: '';
+position: absolute;
+width:10px;
+height: 10px;
+border: solid 2px black;
+border-radius: 50%;
+}
+
+h3:after {top:-12px;left:-12px;}
+h3:before {bottom:-12px;right:-12px;}
+
+.square_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #a6d3c8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+.square_btn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}
