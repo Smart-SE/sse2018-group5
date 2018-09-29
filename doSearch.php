@@ -14,8 +14,16 @@
     #日本語が読み込まれない場合に記述
     setlocale(LC_ALL,'ja_JP.UTF-8');
 
+    $fname = isset($_POST['msn']) ? $_POST['msn'] : null;
+    $name ='dengon100.csv';
+    if ($fname == '08088'){
+		$name='/home/pi/FTP/dengon.csv';
+		#$name='dengon.csv';
+	}else if($fname == '09099'){
+		$name='dengon00.csv';
+	}
     #csvファイルをオープン
-    $fp = fopen("dengon100.csv","r");
+    $fp = fopen($name,"r");
     ?>
     <table align="left">
     <tr>

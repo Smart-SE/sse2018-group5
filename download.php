@@ -14,8 +14,14 @@ function downloadCsv() {
 		$basho = $_POST['basho'];
 
 		//CSVファイルに書き込むデータの準備
-		$data = '電話番号,名前,メッセージ,安否,場所';  //列のタイトル
-		$data .= "\n";
+		//$data = 'コード,No,登録日時,電話番号,名前,メッセージ,安否,場所';  //列のタイトル
+		//$data .= "\n";
+		$data .= '2';
+		$data .= ',';
+		$data .= '1';
+		$data .= ',';
+		$data .= '20180924090000';
+		$data .= ',';
 		$data .= $tel;
 		$data .= ',';
 		$data .= $name;
@@ -29,7 +35,7 @@ function downloadCsv() {
 
 		//CSV形式で情報をファイルに出力のための準備
 		$csvFileName = './dengon00.csv';
-		$res = fopen($csvFileName, 'w');
+		$res = fopen($csvFileName, 'a');
 		if ($res === FALSE) {
 			throw new Exception('ファイルの書き込みに失敗しました。');
 		}
